@@ -1019,4 +1019,4 @@ if __name__ == "__main__":
     # Autenticação e listagem geral
     autenticado = sistema.autenticar_biometrico(1, "impressao_digital_simulada_123")
     print(f"\nAutenticado: {autenticado}")
-    sistema.listar()
+    sistema.listar()gh auth login
