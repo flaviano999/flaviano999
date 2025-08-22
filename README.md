@@ -1019,4 +1019,77 @@ if __name__ == "__main__":
     # Autenticação e listagem geral
     autenticado = sistema.autenticar_biometrico(1, "impressao_digital_simulada_123")
     print(f"\nAutenticado: {autenticado}")
-    sistema.listar()gh auth login
+    sistema.listar()gh auth logingh repo clone SEU_USUARIO/SEU_REPOSITORIO temp-mundopro
+cd temp-mundopro
+
+# Criar/editar o arquivo
+cat <<EOT > checklist_implantacao.md
+# Checklist de Implantação – MundoPro Sistema
+
+## Segurança
+- [ ] Configurar rate limit no login/reset de senha
+- [ ] Alterar fluxo de reset → token só por e-mail/SMS
+- [ ] Criptografar dados sensíveis no banco
+- [ ] Ativar HTTPS obrigatório
+
+## Banco de Dados
+- [ ] Migrar SQLite → PostgreSQL com PostGIS
+- [ ] Usar scoped_session para sessões thread-safe
+- [ ] Criar índices nos campos de busca
+- [ ] Adicionar migrations com Alembic
+
+## API & Backend
+- [ ] Refatorar MundoProSistema em módulos menores
+- [ ] Documentar endpoints com Swagger/OpenAPI
+- [ ] Implementar testes automatizados
+- [ ] Revisar fallback de geolocalização
+
+## Frontend (Flet – Web/Mobile/Desktop)
+- [ ] Criar fluxo de onboarding simplificado
+- [ ] Ajustar UI responsiva
+- [ ] Adicionar push notifications
+- [ ] Compilar versão mobile (APK e IPA)
+- [ ] Testar desempenho em celulares de entrada
+
+## Experiência do Usuário
+- [ ] Implementar avaliações
+- [ ] Criar filtros de busca
+- [ ] Adicionar chat seguro
+- [ ] Criar perfil público do prestador
+
+## Monetização
+- [ ] Definir modelo inicial (taxa por transação ou plano mensal)
+- [ ] Implementar integração de pagamentos
+- [ ] Configurar repasse automático
+
+## Estratégia de Lançamento
+- [ ] Definir cidade piloto
+- [ ] Lançar campanha inicial
+- [ ] Criar versão Lite
+- [ ] Posicionar o app como mais justo que concorrentes
+
+## Roadmap (90 dias)
+### Mês 1 – Beta Técnico
+- Migrar para PostgreSQL
+- Ajustar segurança
+- Gerar APK Beta
+
+### Mês 2 – Beta Público
+- Testar com prestadores da cidade piloto
+- Coletar feedback
+- Testar monetização
+
+### Mês 3 – Escalar
+- Implementar avaliações + filtros
+- Refinar design mobile
+- Preparar campanha de divulgação
+EOT
+
+# Commit e push
+git add checklist_implantacao.md
+git commit -m "Atualiza checklist de implantação MundoPro Sistema"
+git push origin main
+
+# Remover pasta temporária
+cd ..
+rm -rf temp-mundopro
