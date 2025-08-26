@@ -1092,4 +1092,4 @@ git push origin main
 
 # Remover pasta temporária
 cd ..
-rm -rf temp-mundopro
+rm -rf temp-mundopro 
