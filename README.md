@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String, Text, Float, DateTime, ForeignKey, Boolean
+https://mundopro-sistema-de-gestao-e-pagamentos-digital-5rhw6c2.rork.appfrom sqlalchemy import create_engine, Column, Integer, String, Text, Float, DateTime, ForeignKey, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from hashlib import sha256
